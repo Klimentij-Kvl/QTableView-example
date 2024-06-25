@@ -6,6 +6,7 @@ Widget::Widget(int x, int y, QWidget *parent)
     , ui(new Ui::Widget)
 {
     ui->setupUi(this);
+    this->setWindowTitle("EXAMPLE");
 
     model = new QStandardItemModel(x, y);
     ui->tableView->setModel(model);
