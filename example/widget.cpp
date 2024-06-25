@@ -9,6 +9,12 @@ Widget::Widget(int x, int y, QWidget *parent)
 
     model = new QStandardItemModel(x, y);
     ui->tableView->setModel(model);
+    for(int i = 0; i < x; i++){
+        ui->tableView->setColumnWidth(i, 100);
+    }
+    for(int i = 0; i < x; i++){
+        ui->tableView->setRowHeight(i, 100);
+    }
 }
 
 Widget::~Widget()
